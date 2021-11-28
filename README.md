@@ -9,10 +9,16 @@ In the project directory, you can run:
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+To shorten a URL click on get started and input the long URL on the text field. Click on cut and your newly generated URL would be available
+
+cut and paste the URL on a browser and it would redirect to the original URL
+
+To view the statistis of your newly generated shorthened URL click on view statistics and input the last 9 digits of your URL i.e the numbers after the /
 
 ### `yarn test`
 

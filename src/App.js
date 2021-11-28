@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Home from './components/home';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div style={{ backgroundColor: 'white'}}>
+    <CssBaseline />
+      <Container fixed>
+            <Switch>
+              <Route exact path='/'>
+                <Home />
+              </Route>
+               <Route exact path='/statistics'>
+                <Dashboard />
+              </Route>
+              <Redirect to='/' />
+            </Switch>
+      </Container>
     </div>
+    </>
   );
 }
 
