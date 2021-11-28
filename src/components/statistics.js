@@ -9,19 +9,6 @@ import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 import { useSelector } from "react-redux";
 
-// function createData(id, date, name, details, walletId, amount) {
-//   return { id, date, name,  details, walletId, amount };
-// }
-
-// const boy = '04 Sep, 2020';
-// const rows = [
-//   createData(0, `${boy}`, ``, ``),
-//   createData(1, '04 Sep, 2020', 'Paul McCartney', 'Withdrawal', '3esARtvvB ⠀•••• 2574', '₦866.99'),
-//   createData(2, '10 Sep, 2020', 'Tom Scholz', 'Deposit', 'Nn3eLLaBY ⠀•••• 1253', '₦100.81'),
-//   createData(3, '13 Sep, 2020', 'Michael Jackson', 'Withdrawal', 'SSe5IabbW ⠀•••• 2000', '₦654.39'),
-//   createData(4, '15 Sep, 2020', 'Bruce Springsteen', 'Deposit', 'tY77mOiPP ⠀•••• 5919', '₦212.79'),
-// ];
-
 function preventDefault(event) {
   event.preventDefault();
 }
