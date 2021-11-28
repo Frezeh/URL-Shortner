@@ -8,12 +8,13 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Run the server on [http://localhost:3000] before running the front-end
+TO Run the app in the development mode.
 
-Open [http://localhost:3001](http://localhost:3001) after running the server to view it in the browser.
+1. Run the server on [http://localhost:3000] before running the front-end
 
-The page will reload if you make edits.\
+2. Open [http://localhost:3001](http://localhost:3001) after running the server to view it in the browser.
+
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 To shorten a URL click on get started and input the long URL on the text field. Click on cut and your newly generated URL would be available
