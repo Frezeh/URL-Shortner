@@ -110,9 +110,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Dashboard() {
-  useEffect(() => {
-    dispatch(fetchStats());
-  }, [])
+  // useEffect(() => {
+  //   dispatch(fetchStats());
+  // }, [])
 
   const dispatch = useDispatch();
   const classes = useStyles();

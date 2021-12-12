@@ -1,27 +1,42 @@
-import React from 'react';
-import Home from './components/home';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
+import React from "react";
+import Home from "./components/home";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { Switch, Route, Redirect, useLocation } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
+import { useSelector } from "react-redux";
 
 function App() {
+  const statistics = useSelector((state) => state.history);
+
+  const PrivateRoute = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={(props) =>
+        statistics.isCorrectLink ? (
+          <Component {...props} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/",
+              state: { from: location },
+            }}
+          />
+        )
+      }
+    />
+  );
+
+  let location = useLocation();
+
   return (
     <>
-    <div style={{ backgroundColor: 'white'}}>
-    <CssBaseline />
-      <Container fixed>
-            <Switch>
-              <Route exact path='/'>
-                <Home />
-              </Route>
-               <Route exact path='/statistics'>
-                <Dashboard />
-              </Route>
-              <Redirect to='/' />
-            </Switch>
-      </Container>
-    </div>
+      <div>
+        <CssBaseline />
+        <Switch>
+          <PrivateRoute path="/statistics" component={Dashboard} />
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </div>
     </>
   );
 }

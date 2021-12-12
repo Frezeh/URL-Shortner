@@ -23,7 +23,7 @@ export default function Recent() {
       <Typography color="textSecondary" className={classes.depositContext}>
         {history.history.slice(0, 1).map((history) => (
           <p key={history.id}>
-            <h1>{history.date}</h1>
+            <h1>{history.time}</h1>
           </p>
         ))}
       </Typography>

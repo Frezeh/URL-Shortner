@@ -29,6 +29,7 @@ export default function Statistics() {
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
+            <TableCell>Time</TableCell>
             <TableCell>Manufacturer</TableCell>
             <TableCell>Brand</TableCell>
             <TableCell>Model</TableCell>
@@ -39,6 +40,7 @@ export default function Statistics() {
           {history.history.map((hist) => ( 
             <TableRow key={hist?.id}>
               <TableCell>{hist?.date}</TableCell>
+              <TableCell>{hist?.time}</TableCell>
               <TableCell>{hist?.manufacturer}</TableCell>
               <TableCell>{hist?.brand}</TableCell>
               <TableCell>{hist?.model}</TableCell>

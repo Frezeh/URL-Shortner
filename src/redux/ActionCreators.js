@@ -38,8 +38,8 @@ export const postUrl = (url) => (dispatch) => {
     .catch(error => { alert('Your URL could not be shortened\nError: ' + error.message); });
 };
 
-export const fetchStats = () => (dispatch) => {
-  let id = localStorage.getItem('stats');
+export const fetchStats = (id) => (dispatch) => {
+  // let id = localStorage.getItem('stats');
   dispatch(historyLoading());
 
   return fetch(baseUrl + `history/${id}`)
@@ -57,7 +57,10 @@ export const fetchStats = () => (dispatch) => {
         throw errmess;
       })
     .then(response => response.json())
-    .then(history => dispatch(addHistory(history)))
+    .then(history => { 
+      localStorage.setItem('stats', history.id)
+      dispatch(addHistory(history))
+    })
     .catch(error => dispatch(historyFailed(error.message)));
 };
 
