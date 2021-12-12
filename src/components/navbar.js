@@ -6,7 +6,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { Link, Redirect } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -97,7 +96,6 @@ export default function NavBar() {
       <CssBaseline />
       <AppBar position="absolute" className={clsx(classes.appBar)}>
         <Toolbar className={classes.toolbar}>
-          {/* <Link to={`/`}> */}
           <Typography
             component="h1"
             variant="h6"
@@ -107,7 +105,6 @@ export default function NavBar() {
           >
             VD URL Shortner
           </Typography>
-          {/* </Link> */}
         </Toolbar>
       </AppBar>
     </div>
