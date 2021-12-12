@@ -4,7 +4,7 @@ export const history = (
   state = {
     isLoading: true,
     errMess: null,
-    isCorrectLink: localStorage.getItem('stat') ? true : false,
+    isCorrectLink: localStorage.getItem("stat") ? true : false,
     history: [],
   },
   action
@@ -20,10 +20,21 @@ export const history = (
       };
 
     case ActionTypes.HISTORY_LOADING:
-      return { ...state, isLoading: true, errMess: null, isCorrectLink: false, history: [] };
+      return {
+        ...state,
+        isLoading: true,
+        errMess: null,
+        isCorrectLink: false,
+        history: [],
+      };
 
     case ActionTypes.HISTORY_FAILED:
-      return { ...state, isLoading: false, errMess: action.payload, isCorrectLink: false };
+      return {
+        ...state,
+        isLoading: false,
+        errMess: action.payload,
+        isCorrectLink: false,
+      };
 
     default:
       return state;
