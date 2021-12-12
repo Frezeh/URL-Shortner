@@ -76,25 +76,6 @@ function Home() {
         <div className="curve"></div>
       </section>
 
-      {/* <section>
-        <h1>Nice Curves!</h1>
-        <p>
-        <button
-          style={{
-            width: 250,
-            backgroundColor: "#4682B4",
-            padding: 15,
-            justifyContent: "center",
-            marginBottom: 20,
-            borderRadius: 24,
-          }}
-          onClick={handleUrl}
-        >
-          Get Started
-        </button>
-        </p>
-      </section> */}
-
       <section className="bubble">
         <h1>Enter your long url and get its short version.</h1>
         <p>
@@ -118,25 +99,6 @@ function Home() {
           </button>
         </p>
       </section>
-
-      {/* <section className="dark">
-        <h1>Nice Curves!</h1>
-        <p>
-        <button
-          style={{
-            width: 250,
-            backgroundColor: "#4682B4",
-            padding: 15,
-            justifyContent: "center",
-            marginBottom: 150,
-            borderRadius: 24,
-          }}
-          onClick={handleHistory}
-        >
-          View statistics
-        </button>
-        </p>
-      </section> */}
 
       <section className="red">
         <h1 style={{ marginTop: 70 }}>View link statistics</h1>
