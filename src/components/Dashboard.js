@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,8 +12,6 @@ import Chart from './Chart';
 import Recent from './recent';
 import Statistics from './statistics';
 import NavBar from './navbar';
-import { useDispatch } from "react-redux";
-import { fetchStats } from "../redux/ActionCreators";
 
 function Copyright() {
   return (
@@ -110,11 +108,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Dashboard() {
-  // useEffect(() => {
-  //   dispatch(fetchStats());
-  // }, [])
-
-  const dispatch = useDispatch();
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
